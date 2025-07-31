@@ -1,0 +1,311 @@
+/* ========== Base ========== */
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+#wrap {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 850px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#wrap img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ========== Animation ========== */
+.fade-up,
+.fade-down,
+.fadein-blur {
+  opacity: 0;
+}
+
+.fadein-up-active {
+  animation: fadeUPAnime 1s forwards;
+}
+
+@keyframes fadeUPAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadein-down-active {
+  animation: fadeDownAnime 0.8s forwards;
+}
+
+@keyframes fadeDownAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+
+.fadein-blur-active {
+  animation: blur 0.8s forwards;
+}
+
+@keyframes blur {
+  from {
+    filter: blur(20px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+/* ========== Sections ========== */
+.fv {
+  position: relative;
+}
+
+.fv .txt {
+  position: absolute;
+  width: 80%;
+  left: 4%;
+  bottom: 41%;
+  opacity: 0;
+  transform: translateY(15%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fv .txt.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.voices_01,
+.voices_02,
+.result,
+.btn,
+.trouble,
+.strengths,
+.retention,
+.reviews-wrap,
+.flow,
+.end-summary,
+.voices {
+  position: relative;
+}
+
+.voices_01 .img {
+  position: absolute;
+  width: 26%;
+  left: 36%;
+  bottom: 28.3%;
+}
+
+.voices_02 .img1,
+.voices_02 .img2,
+.voices_02 .img3 {
+  position: absolute;
+  width: 90%;
+  left: 4.5%;
+}
+
+.voices_02 .img1 {
+  bottom: 67%;
+}
+
+.voices_02 .img2 {
+  bottom: 34.5%;
+}
+
+.voices_02 .img3 {
+  bottom: 2%;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: 90%;
+  height: auto;
+  padding: 0 1%;
+}
+
+.swiper-l .swiper-slide {
+  width: 100%;
+  transition-timing-function: linear !important;
+}
+
+.result .sider-box1,
+.sider-box2,
+.strengths .img,
+.reviews-wrap .sider-box1 {
+  position: absolute;
+}
+
+.result .sider-box1 {
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+}
+
+.btn a {
+  position: absolute;
+  width: 98%;
+  left: 2%;
+  bottom: 10%;
+}
+
+.trouble .txt {
+  position: absolute;
+  width: 84.2%;
+  left: 7.8%;
+  bottom: 79.5%;
+}
+
+.strengths .txt {
+  position: absolute;
+  width: 81%;
+  left: 10.5%;
+  bottom: 33%;
+}
+
+.strengths .img {
+  width: 74.5%;
+  left: 12.7%;
+  bottom: 6%;
+}
+
+.retention .txt {
+  position: absolute;
+  width: 68.5%;
+  left: 15.7%;
+  bottom: 37%;
+}
+
+.reviews-wrap .sider-box1 {
+  bottom: 12.8%;
+  left: 0;
+  width: 100%;
+}
+
+.voices .swiper {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 1%;
+  left: 0;
+}
+
+.swiper-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  background-color: #000;
+  border-radius: 5%;
+  width: 8%;
+  height: 70px;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  content: '';
+}
+
+.swiper .swiper-button-next::after {
+  content: '→';
+}
+
+.swiper .swiper-button-prev::after {
+  content: '←';
+}
+
+.flow .img1,
+.flow .img2 {
+  position: absolute;
+  width: 12.7%;
+  left: 43.6%;
+}
+
+.flow .img1 {
+  bottom: 71.6%;
+}
+
+.flow .img2 {
+  bottom: 45.3%;
+}
+
+.end-summary .txt1 {
+  position: absolute;
+  width: 55%;
+  left: 25.2%;
+  bottom: 43%;
+}
+
+.end-summary .txt2 {
+  position: absolute;
+  width: 64%;
+  left: 18.2%;
+  bottom: 23.5%;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px;
+  /* background-color: rgba(245, 215, 0, 0.7); */
+}
+
+.floating-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-btn img {
+  width: 100%;
+  /* max-width: 850px; */
+  height: auto;
+  display: block;
+}
+
+.floating-btn.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
